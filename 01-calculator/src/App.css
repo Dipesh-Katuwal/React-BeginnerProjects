@@ -1,0 +1,14 @@
+.calc-container{
+  margin-top: 5px;
+  margin-left: 550px;
+  
+  padding: 7px;
+  border: 3px solid rgb(246, 192, 15);
+  width: 300px;
+  height: 620px;
+}
+
+.heading{
+  text-align: center;
+  color: rgb(54, 22, 236);
+}

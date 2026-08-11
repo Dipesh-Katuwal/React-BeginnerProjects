@@ -1,0 +1,24 @@
+.favourites {
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 48px;
+  color: #edf4f2;
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(57, 168, 157, 0.2),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 92% 70%,
+      rgba(239, 118, 88, 0.12),
+      transparent 28rem
+    ),
+    linear-gradient(180deg, #142b32 0%, #09151b 100%);
+}
+
+.nofav{
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(244, 19, 19);
+  margin: 100px 0px 0px 550px;
+}

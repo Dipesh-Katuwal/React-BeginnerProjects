@@ -1,0 +1,35 @@
+.bar {
+  height: 600px;
+}
+.page {
+  display: flex;
+}
+.content {
+  width: 100%;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-post {
+  margin: 5px 15px;
+}
+
+.tags {
+  margin: 0px 3px;
+}
+
+.delete {
+  text-align: right;
+}
+
+.reaction{
+  margin: 0px 30px;
+}
+
+.postdata{
+  width: 80%;
+  margin: 10px 40px;
+}

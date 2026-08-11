@@ -1,0 +1,245 @@
+.details_page {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 112px 24px 80px;
+  color: #55b6b6;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 19, 39, 0.72),
+    rgba(8, 12, 24, 0.96)
+  );
+  isolation: isolate;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 560px;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.58;
+  filter: brightness(0.62) saturate(1.2) contrast(1.05);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  mask-image: linear-gradient(to bottom, black, transparent);
+  pointer-events: none;
+  z-index: -2;
+}
+
+.details_page::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(11, 9, 24, 0.84),
+      rgba(11, 9, 24, 0.36) 62%,
+      rgba(11, 9, 24, 0.68)
+    ),
+    linear-gradient(180deg, rgba(14, 11, 28, 0.22), #080c18 68%, #080c18);
+  content: "";
+  pointer-events: none;
+}
+
+.hero,
+.stats,
+.info_grid {
+  position: relative;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(210px, 280px) 1fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.poster_frame {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(101, 214, 209, 0.48);
+  border-radius: 14px;
+  background: #102127;
+  box-shadow:
+    0 22px 54px rgba(3, 4, 15, 0.58),
+    0 0 28px rgba(101, 214, 209, 0.1);
+}
+
+.poster,
+.poster_fallback {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.poster {
+  object-fit: cover;
+}
+
+.poster_fallback {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #b9c7cf;
+  text-align: center;
+}
+
+.intro {
+  max-width: 720px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #ffbf69;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+  margin: 16px 0 0;
+  color: #e6a9c1;
+  font-style: italic;
+}
+
+.overview {
+  margin: 24px 0 0;
+  color: #e1e5ee;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.actions a {
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 191, 105, 0.52);
+  border-radius: 999px;
+  color: #fff1d8;
+  background: rgba(89, 54, 57, 0.74);
+  font-weight: 600;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+  text-decoration: none;
+}
+
+.actions a:hover {
+  background: #a45c58;
+  transform: translateY(-2px);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 56px;
+  border: 1px solid rgba(101, 214, 209, 0.25);
+  background: rgba(101, 214, 209, 0.13);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.stats div {
+  display: grid;
+  gap: 6px;
+  padding: 20px;
+  background: rgba(17, 20, 38, 0.9);
+}
+
+.stats strong {
+  color: #65d6d1;
+  font-size: 1.15rem;
+}
+.stats span {
+  color: #aeb7c9;
+  font-size: 0.78rem;
+}
+
+.info_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.info_section {
+  padding: 24px;
+  border: 1px solid rgba(230, 169, 193, 0.2);
+  border-radius: 8px;
+  background: rgba(22, 19, 39, 0.88);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.info_section h2 {
+  margin: 0 0 18px;
+  font-size: 1.15rem;
+}
+
+dl {
+  margin: 0;
+}
+dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(174, 183, 201, 0.16);
+}
+dl div:last-child {
+  border-bottom: 0;
+}
+dt {
+  color: #aeb7c9;
+}
+dd {
+  margin: 0;
+  color: #f7e9f0;
+  text-align: right;
+}
+
+.message {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .details_page {
+    padding: 32px 16px 56px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .poster_frame {
+    width: min(100%, 260px);
+  }
+  .stats,
+  .info_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .stats,
+  .info_grid {
+    grid-template-columns: 1fr;
+  }
+}

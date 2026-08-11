@@ -1,0 +1,12 @@
+
+.input{
+  padding: 10px;
+  width: 140%;
+  border-radius: 5px;
+  border: 1px solid rgb(136, 216, 23);
+}
+
+.addbtn{
+ --bs-btn-padding-x: 1.5rem !important;
+ --bs-btn-padding-y: 0.5rem !important;
+}
