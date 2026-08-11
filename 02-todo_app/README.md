@@ -1,44 +1,43 @@
-# TodoApp
+# Todo App
 
-A simple beginner-friendly React Todo application built with Vite.
+A simple todo list built with React and Vite. The app keeps tasks in component state and separates the interface into small components.
 
-## What it does
+## Features
 
-- Add tasks to a todo list
-- View todos in a list
-- Remove tasks when they are done
+- Add a new todo item
+- Display todo items in a list
+- Delete items from the list
+- Show an empty-list message when there are no todos
+- Display a footer with the current list state
 
-## Why this project
+## Concepts practised
 
-This is a learning project for React and Vite. It is meant to help you practice:
+- `useState` for managing an array of todos
+- Form submission and input handling
+- Conditional rendering
+- Rendering lists with stable keys
+- Passing state and setter functions to child components
+- CSS Modules, Bootstrap, and React Icons
 
-- creating components
-- managing state
-- working with forms
-- using React with a modern build tool
+## Run locally
 
-## How to run
+```bash
+npm install
+npm run dev
+```
 
-1. Open a terminal in this folder
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open the URL shown in the terminal (usually `http://localhost:5173`)
+Other scripts are `npm run build`, `npm run lint`, and `npm run preview`.
 
-## Project files
+## Project structure
 
-- `src/` - application source code
-- `public/` - public assets
-- `package.json` - project settings and scripts
-- `vite.config.js` - Vite configuration
+- `src/App.jsx` - owns the todo list state
+- `src/components/InputTodo.jsx` - todo form
+- `src/components/TodoItems.jsx` - todo list
+- `src/components/TodoItem.jsx` - individual todo item
+- `src/components/Message.jsx` - empty-list message
+- `src/components/Footer.jsx` - list footer
+- `src/components/*.module.css` - component styles
 
-## Notes
+## Possible improvements
 
-- This repo does not include `node_modules`
-- Use `npm run build` to create a production build
-- This is still a learning project, so the code is kept simple and easy to understand
+Useful next steps would be editing tasks, marking tasks complete, saving todos to `localStorage`, and adding form validation.

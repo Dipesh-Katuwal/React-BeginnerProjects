@@ -1,44 +1,39 @@
 # Calculator
 
-A beginner-friendly React calculator built with Vite.
+A small calculator built with React and Vite. It focuses on interactive components and local state.
 
-## What it does
+## Features
 
-- Perform basic arithmetic operations
-- Enter numbers and operators using the app interface
-- Clear input and reset the calculator
+- Enter numbers and arithmetic operators with buttons
+- Evaluate an expression with `=`
+- Clear the current expression with `C`
+- Display the current value in a separate input component
 
-## Why this project
+## Concepts practised
 
-This is a learning project to practice React and Vite with a small interactive app. It is meant to help you learn:
+- `useState` for calculator state
+- Passing event handlers through props
+- Reusable button and input components
+- Rendering a button grid from component data
+- CSS Modules and Bootstrap styling
 
-- working with React component state
-- rendering buttons and handling clicks
-- updating the UI dynamically
-- using a simple React + Vite setup
+## Run locally
 
-## How to run
+```bash
+npm install
+npm run dev
+```
 
-1. Open a terminal in this folder
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open the URL shown in the terminal (usually `http://localhost:5173`)
+Other scripts are `npm run build`, `npm run lint`, and `npm run preview`.
 
-## Project files
+## Project structure
 
-- `src/` - application source code
-- `package.json` - project settings and scripts
-- `vite.config.js` - Vite configuration
-- `README.md` - this file
+- `src/App.jsx` - calculator state and button behavior
+- `src/components/Button.jsx` - individual calculator button
+- `src/components/ButtonContainer.jsx` - calculator button layout
+- `src/components/InputField.jsx` - calculator display
+- `src/components/*.module.css` - component styles
 
-## Notes
+## Learning note
 
-- This is a beginner project and still a learning exercise
-- Use `npm run build` to create a production build
-- The app is kept simple so it is easier to understand and modify
+This is intentionally a simple learning implementation. A future version could add decimal handling, keyboard input, validation, and safer expression parsing.

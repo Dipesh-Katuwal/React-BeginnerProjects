@@ -1,16 +1,65 @@
-# React + Vite
+# Movie Search Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A movie discovery app built with React, Vite, React Router, and the [TMDB API](https://www.themoviedb.org/documentation/api). Browse popular movies, search by title, open a details page, and save favourites.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Load popular movies when the app opens
+- Search for movies by title
+- View poster, release date, and rating cards
+- Open a dedicated movie details page
+- View overview, genres, runtime, ratings, financials, and external links
+- Add and remove movies from a favourites list
+- Navigate between Home and Favourites pages
+- Show a loading spinner while requests are running
 
-## React Compiler
+## Routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Path              | Page                      |
+| ----------------- | ------------------------- |
+| `/` or `/Home`    | Popular movies and search |
+| `/favourites`     | Saved favourite movies    |
+| `/movie/:movieId` | Details for one movie     |
 
-## Expanding the Oxlint configuration
+## API setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+The app uses TMDB for movie data and poster images. The current API helper contains an API key directly in the source code. Before publishing this repository publicly, move it to an environment variable and rotate the exposed key if it is active.
+
+For a safer local setup:
+
+1. Create a `.env` file in this project.
+2. Add `VITE_TMDB_API_KEY=your_api_key`.
+3. Update the API helper to read `import.meta.env.VITE_TMDB_API_KEY`.
+4. Add `.env` to `.gitignore`.
+
+## Concepts practised
+
+- Fetching data with async functions and `useEffect`
+- Loading and error state
+- React Router routes, links, parameters, and nested layout content
+- Context API for favourites
+- CSS Modules for page and component styles
+- Reusable movie cards and API helper functions
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Other scripts are `npm run build`, `npm run lint`, and `npm run preview`.
+
+## Project structure
+
+- `src/App.jsx` - router, movie state, loading state, and searches
+- `src/pages/` - Home, Favourites, and Movie Details pages
+- `src/components/api calls/apis.js` - TMDB requests
+- `src/components/MovieCard.jsx` - movie summary card
+- `src/ContextAPI/FavouriteContext.jsx` - favourites state
+- `src/**/*.module.css` - component and page styles
+
+## Credits
+
+- Movie data and images: [The Movie Database (TMDB)](https://www.themoviedb.org/)
+- Built for React learning and experimentation

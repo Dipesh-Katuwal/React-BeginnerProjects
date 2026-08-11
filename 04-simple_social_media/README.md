@@ -1,16 +1,42 @@
-# React + Vite
+# Simple Social Media
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small social-media-style React interface for creating, viewing, and deleting posts. It introduces shared state across multiple components.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- View the default sample posts
+- Switch between Home and Create Post views
+- Create a post with a title, body, tags, reactions, and user ID
+- Delete posts from the feed
+- Display tags and reaction counts on each post
 
-## React Compiler
+## Concepts practised
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Context API for sharing post data
+- `useReducer` for add and delete actions
+- `useContext` in nested components
+- `useRef` for reading form values
+- Conditional rendering based on the selected tab
+- Reusable components and Bootstrap icons
 
-## Expanding the ESLint configuration
+## Run locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Other scripts are `npm run build`, `npm run lint`, and `npm run preview`.
+
+## Project structure
+
+- `src/App.jsx` - application layout and selected tab
+- `src/store/post-list-store.jsx` - post context, reducer, and initial data
+- `src/components/CreatePost.jsx` - post creation form
+- `src/components/PostList.jsx` - feed of posts
+- `src/components/Post.jsx` - individual post and delete action
+- `src/components/Sidebar.jsx` - navigation between views
+
+## Learning note
+
+Posts currently live only in memory, so refreshing the page restores the default sample posts. A useful next step would be persisting the post list and adding validation for required fields.
