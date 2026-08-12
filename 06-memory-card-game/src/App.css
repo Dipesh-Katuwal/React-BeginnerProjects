@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(14, 165, 233, 0.28),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(20, 184, 166, 0.22),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #082f49 0%, #0f172a 55%, #134e4a 100%);
+}

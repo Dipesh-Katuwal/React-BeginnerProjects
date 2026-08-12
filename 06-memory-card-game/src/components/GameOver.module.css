@@ -1,0 +1,59 @@
+.game_over {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.72);
+  z-index: 50;
+}
+
+.game_over h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 1.8rem;
+}
+
+.score,
+.moves {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.score h2,
+.moves h2 {
+  margin: 0;
+  color: #f8fafc;
+  font-size: 1.5rem;
+}
+
+.score_value,
+.move_number {
+  margin-left: 0.5rem;
+  color: #86efac;
+}
+
+.new_game_button {
+  margin-top: 0.25rem;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(34, 197, 94, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.new_game_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.75rem 1.25rem rgba(34, 197, 94, 0.45);
+}
