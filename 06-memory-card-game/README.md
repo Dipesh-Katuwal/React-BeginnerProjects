@@ -1,16 +1,47 @@
-# React + Vite
+# Memory Card Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A small memory matching game built with React and Vite. The player flips cards to find matching fruit icons, keeps score, tracks moves, and wins when all cards are matched.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 4 fruit types repeated to form a memory board
+- Card flip interaction
+- Match detection logic
+- Score tracking
+- Move counter
+- Restart game button
+- Game-over popup when all cards are matched
+- CSS-based card styling and match tick indicator
 
-## React Compiler
+## Project goals
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project focuses on:
 
-## Expanding the Oxlint configuration
+- React state management
+- array shuffling and card data updates
+- click event handling
+- conditional rendering for win state
+- simple game logic in a component-based app
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL shown in the terminal, usually:
+
+```bash
+http://localhost:5173
+```
+
+## Build for production
+
+```bash
+npm run build
+```
+
+## Notes
+
+This is a beginner-friendly game project and is a good example of using React state to drive UI updates in a simple game loop.

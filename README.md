@@ -6,13 +6,14 @@ All projects use [Vite](https://vite.dev/) for local development and production 
 
 ## Projects
 
-| Project                                             | What I practiced                                                      |
-| --------------------------------------------------- | --------------------------------------------------------------------------- |
-| [01 Calculator](./01-calculator)                    | Component composition, `useState`, click handlers, and conditional logic    |
-| [02 Todo App](./02-todo_app)                        | Forms, lists, controlled state, and reusable components                     |
-| [03 Weather App](./03-weather_app)                  | `useEffect`, asynchronous requests, geocoding, and API data                 |
-| [04 Simple Social Media](./04-simple_social_media)  | Context API, `useReducer`, forms with refs, and shared state                |
-| [05 Movie Search Engine](./05-movie_search_engiene) | API integration, loading states, React Router, Context API, and CSS Modules |
+| Project                                             | What I practiced                                                                          |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [01 Calculator](./01-calculator)                    | Component composition, `useState`, click handlers, and conditional logic                  |
+| [02 Todo App](./02-todo_app)                        | Forms, lists, controlled state, and reusable components                                   |
+| [03 Weather App](./03-weather_app)                  | `useEffect`, asynchronous requests, geocoding, and API data                               |
+| [04 Simple Social Media](./04-simple_social_media)  | Context API, `useReducer`, forms with refs, and shared state                              |
+| [05 Movie Search Engine](./05-movie_search_engiene) | API integration, loading states, React Router, Context API, and CSS Modules               |
+| [06 Memory Card Game](./06-memory-card-game)        | State-driven game logic, shuffle logic, match detection, score tracking, and win state UI |
 
 The projects become progressively more involved, so they can be explored in order or opened independently.
 
@@ -57,6 +58,7 @@ npm run lint      # Run the project's configured linter
 - Share state with Context API and reducers.
 - Add client-side pages with React Router.
 - Build and style applications with Bootstrap and CSS Modules.
+- Create a small interactive game using state, matching logic, and game-over UI.
 
 ## Notes
 
