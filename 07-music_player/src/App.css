@@ -1,0 +1,13 @@
+.content-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper{
+  background-color: rgb(126, 243, 243);
+  height: 100vh;
+  padding-top: 5px;
+}

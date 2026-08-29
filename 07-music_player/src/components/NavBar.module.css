@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #335ce3;
+  padding: 5rem 0;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 5px;
+  margin: 5px auto 0;
+}
+
+.brand {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brand:hover,
+.brand:focus {
+  color: #bfdbfe;
+}
+
+.link {
+  color: #dbeafe;
+  margin-left: 1rem;
+}
+
+.link:hover,
+.link:focus {
+  color: #ffffff;
+}

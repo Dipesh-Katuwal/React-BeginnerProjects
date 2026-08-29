@@ -1,0 +1,15 @@
+.musicPlayerContainer {
+  background-color: #13145b67;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+}
+
+.musicPlayerContainer h2 {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+}
