@@ -1,0 +1,220 @@
+/* AllSongs Component Styles */
+
+.allSongsContainer {
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 100%;
+  max-height: calc(100vh - 150px);
+  overflow: hidden;
+  overflow-y: auto;
+  animation: fadeIn 0.3s ease-in;
+  border-radius: 12px;
+}
+
+/* Modern Scrollbar Styling */
+.allSongsContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.allSongsContainer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.allSongsContainer::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #28e895 0%, #764ba2 100%);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.allSongsContainer::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #40ff9f 0%, #8b5ca8 100%);
+  box-shadow: 0 0 10px rgba(40, 232, 149, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title Styling */
+.allSongsContainer h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.songsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.songItem {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 3.5rem;
+}
+
+.glowsongItem {
+  background: rgba(0, 255, 34, 0.1);
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 255, 60, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 3.5rem;
+}
+
+.songItem:hover {
+  background: rgba(181, 232, 40, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(208, 255, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.songItem:active {
+  transform: translateY(-2px);
+}
+
+/* Song Info Container */
+.songInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Song Title */
+.songInfo h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* Artist Name */
+.songInfo p {
+  margin: 0;
+  color: rgba(237, 165, 165, 0.8);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Duration */
+.songInfo small {
+  color: rgba(231, 240, 242, 0.6);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .allSongsContainer {
+    padding: 1rem;
+  }
+
+  .allSongsContainer h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .songsList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .songItem {
+    padding: 1.2rem;
+  }
+
+  .songInfo h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .allSongsContainer {
+    padding: 0.5rem;
+  }
+
+  .allSongsContainer h2 {
+    font-size: 1.5rem;
+  }
+
+  .songItem {
+    padding: 1rem;
+  }
+
+  .songInfo h3 {
+    font-size: 1rem;
+  }
+
+  .songInfo p {
+    font-size: 0.85rem;
+  }
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: rgba(40, 232, 149, 0.8);
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+.favoriteButton {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 1rem;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.favoriteButton:hover {
+  color: #ff6b81;
+  transform: scale(1.15);
+}
+
+.emptyMessage {
+  color: white;
+  text-align: center;
+}

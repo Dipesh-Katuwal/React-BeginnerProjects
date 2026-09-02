@@ -1,15 +1,151 @@
 .musicPlayerContainer {
   background-color: #13145b67;
-  padding: 40px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 450px;
   height: 250px;
+  box-sizing: border-box;
+}
+
+.player {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 24px 6px;
+  box-sizing: border-box;
+}
+
+.song_info {
+  text-align: center;
 }
 
 .musicPlayerContainer h2 {
   color: white;
-  margin: 0;
+  font-family: "Courier New", Courier, monospace;
   font-size: 28px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.title {
+  display: block;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 0 0 4px;
+  animation: fadeIn 0.5s ease-in;
+  transition: all 0.3s ease-in;
+  color: bisque;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.element {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.artist {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: aqua;
+  animation: fadeIn 0.7s ease-in;
+  transition: all 0.9s ease-in;
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 38px;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 12px;
+}
+
+.progress span,
+.progress small {
+  white-space: nowrap;
+}
+
+.progress small {
+  text-align: right;
+}
+
+.progress input,
+.volume_div input {
+  width: 100%;
+  height: 4px;
+  margin: 0;
+  accent-color: #28e895;
+  cursor: pointer;
+}
+
+.play_pause {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.play_pause button {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.play_pause button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 12px rgba(40, 232, 149, 0.3);
+}
+
+.previous_button,
+.next_button {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.play_button {
+  width: 60px;
+  height: 60px;
+  background-color: #28e895;
+}
+
+.previous_button svg,
+.next_button svg {
+  font-size: 25px;
+}
+
+.play_button svg {
+  font-size: 30px;
+}
+
+.volume_div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.volume_div > svg {
+  flex: 0 0 auto;
+  font-size: 20px;
 }

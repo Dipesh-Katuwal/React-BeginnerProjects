@@ -4,7 +4,7 @@ import { MusicPlayer } from "./components/MusicPlayer";
 import { MusicControl } from "./components/MusicControl";
 import NavBar from "./components/NavBar";
 import AllSongs from "./components/AllSongs";
-import Playlists from "./components/Playlists";
+import Playlists from "./components/Favourites";
 
 //routing
 function Layout() {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <AllSongs /> },
       { path: "/all-songs", element: <AllSongs /> },
-      { path: "/playlists", element: <Playlists /> },
+      { path: "/favourites", element: <Playlists /> },
     ],
   },
 ]);
