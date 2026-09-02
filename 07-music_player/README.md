@@ -1,16 +1,68 @@
-# React + Vite
+# Music Player
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A local music player built with React and Vite. Browse the bundled songs, play a track, adjust playback, and save songs to a favourites list.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Browse a library of 10 locally bundled songs
+- Play and pause the selected song
+- Skip to the previous or next song
+- Seek through a song with a progress slider
+- Adjust playback volume
+- Highlight the currently selected song
+- Add and remove songs from Favourites
+- Navigate between All Songs and Favourites pages with React Router
 
-## React Compiler
+## Routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Path          | Page                  |
+| ------------- | --------------------- |
+| `/`           | All songs             |
+| `/all-songs`  | All songs             |
+| `/favourites` | Saved favourite songs |
 
-## Expanding the Oxlint configuration
+## Concepts practised
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- React Context API for shared playback and favourites state
+- Custom hooks for providing the song library
+- `useRef` and the HTML audio element for playback control
+- `useEffect` for audio events, progress updates, and volume changes
+- Controlled range inputs for seeking and volume
+- React Router pages and navigation
+- CSS Modules and reusable components
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL shown in the terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## Build for production
+
+```bash
+npm run build
+```
+
+Other available scripts are `npm run lint` and `npm run preview`.
+
+## Project structure
+
+- `src/App.jsx` - application layout and routes
+- `src/components/AllSongs.jsx` - song library and favourite controls
+- `src/components/Favourites.jsx` - saved songs page
+- `src/components/MusicPlayer.jsx` - audio playback and player controls
+- `src/components/MusicPlayContext.jsx` - shared playback and favourites state
+- `src/hooks/useMusic.js` - local song data
+- `public/songs/` - bundled audio files
+
+## Notes
+
+- The song list is currently hardcoded in `src/hooks/useMusic.js`.
+- The audio files are included for local learning and demonstration. Confirm that you have permission to redistribute them before publishing this project publicly.
