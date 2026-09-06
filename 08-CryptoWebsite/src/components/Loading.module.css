@@ -1,0 +1,17 @@
+.loader_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 325px ;
+}
+
+.coin_loader {
+  font-size: 3rem;
+  animation: flipCoin 0.8s infinite ease-in-out;
+}
+
+@keyframes flipCoin {
+  0% { transform: rotateY(0deg) scale(1); }
+  50% { transform: rotateY(180deg) scale(1.2); color: #f7931a; }
+  100% { transform: rotateY(360deg) scale(1); }
+}

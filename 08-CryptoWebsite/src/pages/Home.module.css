@@ -1,0 +1,200 @@
+.homediv {
+  min-height: 100vh;
+  background: #0d0e11;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 132px;
+  padding: 24px 70px 0;
+  border-bottom: 1px solid #26282d;
+  background: #0d0e11;
+  color: #f4f5f7;
+}
+
+.search {
+  position: absolute;
+  top: 28px;
+  right: 70px;
+  width: min(280px, 32%);
+}
+
+.search input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #353941;
+  border-radius: 8px;
+  outline: none;
+  background: #17191e;
+  color: #f4f5f7;
+  font: inherit;
+  font-size: 13px;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.search input::placeholder {
+  color: #777b84;
+}
+
+.search input:focus {
+  border-color: #f7931a;
+  box-shadow: 0 0 0 3px rgba(247, 147, 26, 0.14);
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header hr {
+  margin: 18px 0 0;
+  border: 0;
+}
+.header p {
+  color: rgb(76, 150, 214);
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 18px 70px 4px;
+}
+
+.filterLabel {
+  color: #bfc4cc;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.selection {
+  min-width: 150px;
+  padding: 9px 34px 9px 12px;
+  border: 1px solid #353941;
+  border-radius: 6px;
+  outline: none;
+  background: #17191e;
+  color: #d8dbe0;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+}
+
+.selection:hover,
+.selection:focus {
+  border-color: #f7931a;
+}
+
+.selection option {
+  background: #17191e;
+  color: #d8dbe0;
+}
+
+.viewControl {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px 70px 6px;
+}
+
+.viewControl button {
+  min-width: 70px;
+  padding: 8px 14px;
+  border: 1px solid #353941;
+  border-radius: 6px;
+  background: #17191e;
+  color: #bfc4cc;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.viewControl button:hover {
+  border-color: #f7931a;
+  color: #fff;
+}
+
+.viewControl button:focus-visible {
+  outline: 2px solid #f7931a;
+  outline-offset: 2px;
+}
+
+.cryptos {
+  padding: 10px 70px 32px;
+  background-color: #0d0e11;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1060px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+.cardGrid > * {
+  width: 100%;
+  min-height: 230px;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardList > * {
+  width: min(100%, 720px);
+}
+
+@media (max-width: 600px) {
+  .header,
+  .filter,
+  .viewControl,
+  .cryptos {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .header {
+    min-height: 184px;
+  }
+
+  .search {
+    top: 118px;
+    right: 20px;
+    left: 20px;
+    width: auto;
+  }
+
+  .selection {
+    width: 100%;
+  }
+
+  .viewControl {
+    justify-content: stretch;
+  }
+
+  .viewControl button {
+    flex: 1;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

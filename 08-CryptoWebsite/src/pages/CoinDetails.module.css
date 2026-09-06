@@ -1,0 +1,277 @@
+.page {
+  min-height: 100vh;
+  padding: 28px clamp(20px, 7vw, 96px) 56px;
+  background: #0d0e11;
+  color: #f4f5f7;
+}
+
+.topbar,
+.hero,
+.contentGrid,
+.page > .panel {
+  width: min(100%, 1080px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+  margin-bottom: 34px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0d0e11;
+  padding: 16px 0;
+}
+
+.backLink {
+  color: #f7931a;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: #ffbd6b;
+}
+
+.coinId {
+  color: #777b84;
+  font-size: 15px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #26282d;
+}
+
+.logo {
+  display: grid;
+  width: 76px;
+  height: 76px;
+  flex: 0 0 76px;
+  place-items: center;
+  border: 1px solid #353941;
+  border-radius: 50%;
+  background: #17191e;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.eyebrow,
+.symbol,
+.hero h1,
+.panel h2 {
+  margin: 0;
+}
+
+.eyebrow {
+  color: #f7931a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin-top: 4px;
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.symbol {
+  margin-top: 5px;
+  color: #8e929b;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
+
+.rank {
+  margin-left: auto;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #dcf347;
+  color: #133e1c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.panel {
+  padding: 22px;
+  border: 1px solid #26282d;
+  border-radius: 12px;
+  background: #111216;
+}
+
+.panelHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel h2 {
+  font-size: 17px;
+}
+
+.chartPanel {
+  grid-column: 1 / -1;
+}
+
+.chartMeta {
+  color: #777b84;
+  font-size: 12px;
+}
+
+.chart {
+  width: 100%;
+  height: 320px;
+  margin-top: 22px;
+}
+
+.description {
+  margin: 16px 0 0;
+  color: #bfc4cc;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.active,
+.inactive {
+  padding: 5px 18px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.active {
+  background: #123721;
+  color: #54c879;
+}
+.inactive {
+  background: #3c1c20;
+  color: #f1787f;
+}
+
+.detailList {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+}
+
+.detailList div {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid #24262b;
+  padding-bottom: 9px;
+}
+
+.detailList dt {
+  color: #777b84;
+  font-size: 12px;
+}
+.detailList dd {
+  margin: 0;
+  color: #d8dbe0;
+  font-size: 12px;
+  text-align: right;
+}
+
+.tags,
+.links,
+.teamGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.tags span {
+  padding: 6px 9px;
+  border: 1px solid #353941;
+  border-radius: 999px;
+  color: #bfc4cc;
+  font-size: 11px;
+}
+
+.links a {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #17191e;
+  color: #f7931a;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.links a:hover {
+  background: #26282d;
+}
+
+.page > .panel {
+  margin-top: 16px;
+}
+
+.teamMember {
+  display: grid;
+  min-width: 160px;
+  gap: 4px;
+  padding: 11px;
+  border: 1px solid #26282d;
+  border-radius: 8px;
+}
+
+.teamMember strong {
+  font-size: 13px;
+}
+.teamMember span {
+  color: #8e929b;
+  font-size: 11px;
+}
+
+.state {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  gap: 14px;
+  background: #0d0e11;
+  color: #bfc4cc;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .hero {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .rank {
+    margin-left: 0;
+  }
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+  .panel {
+    padding: 18px;
+  }
+}
