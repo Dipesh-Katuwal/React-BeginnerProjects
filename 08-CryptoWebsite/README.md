@@ -1,16 +1,79 @@
-# React + Vite
+# LiveCrypto
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive cryptocurrency dashboard built with React and Vite. Browse market data, search for coins, sort the market list, switch between grid and list views, and open a detailed page with project information and a seven-day price chart.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Cryptocurrency market list powered by CoinPaprika
+- Search by coin name or symbol
+- Sort by rank, name, price, or 24-hour volume
+- Responsive grid and list layouts
+- Coin logos, prices, market cap, volume, and daily change
+- Coin details page with project metadata, tags, team, and useful links
+- Seven-day responsive price chart built with Recharts
+- Loading and error states
+- Hash-based routing for GitHub Pages-friendly navigation
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Router
+- Recharts
+- React Icons
+- CSS Modules
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+From this project directory:
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL shown by Vite in your browser.
+
+## Other Commands
+
+```bash
+npm run build    # Create a production build
+npm run preview  # Preview the production build locally
+npm run lint     # Run Oxlint
+```
+
+## Routes
+
+Because the app uses `HashRouter`, routes include a hash in the URL:
+
+```text
+/#/                 Market home page
+/#/coin/btc-bitcoin Coin details page example
+```
+
+## API
+
+The app uses the free CoinPaprika API:
+
+- `GET /v1/tickers?limit=100` loads the market list
+- `GET /v1/coins/:id` loads project details
+- `GET /v1/tickers/:id/historical` loads seven days of daily price history
+
+The historical chart intentionally requests one point per day. This keeps the number of requests and returned data small while still showing the seven-day trend. The API is external, so DNS, network access, rate limits, and provider availability can affect the app.
+
+## Project Structure
+
+```text
+src/
+	apis/          API request helpers
+	components/    Reusable UI components
+	pages/         Home and coin details pages
+	utils/         Formatting helpers
+	App.jsx        Router configuration
+```
+
+## Notes
+
+- The API does not need an application key for the requests used by this learning project.
+- For UI development without making requests, use local mock data and skip the fetch effect temporarily.
+- The seven-day chart can show more visual spacing by resizing its chart container or displaying every X-axis label, but fake points should not be added because they would not represent real prices.

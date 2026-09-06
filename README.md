@@ -15,6 +15,7 @@ All projects use [Vite](https://vite.dev/) for local development and production 
 | [05 Movie Search Engine](./05-movie_search_engiene) | API integration, loading states, React Router, Context API, and CSS Modules               |
 | [06 Memory Card Game](./06-memory-card-game)        | State-driven game logic, shuffle logic, match detection, score tracking, and win state UI |
 | [07 Music Player](./07-music_player)                | HTML audio playback, Context API, custom hooks, range inputs, routing, and favourites     |
+| [08 Crypto Website](./08-CryptoWebsite)             | CoinPaprika API data, search, sorting, responsive layouts, dynamic routes, and Recharts   |
 
 The projects become progressively more involved, so they can be explored in order or opened independently.
 
@@ -62,6 +63,9 @@ npm run lint      # Run the project's configured linter
 - Create a small interactive game using state, matching logic, and game-over UI.
 - Control local audio with the HTML audio element and React refs.
 - Build a music library with playback controls, progress tracking, volume, and favourites.
+- Build a cryptocurrency dashboard with search, sorting, grid/list views, and responsive cards.
+- Fetch coin metadata and seven-day historical prices from an external API.
+- Render responsive data visualizations with Recharts.
 
 ## Notes
 
@@ -69,6 +73,7 @@ npm run lint      # Run the project's configured linter
 - `node_modules` and generated build output should not be committed.
 - The movie project currently contains a TMDB API key in its source code. Before publishing this repository publicly, move that key to an environment variable and rotate the exposed key if it is active.
 - The music project includes bundled MP3 files for local demonstration. Confirm that you have permission to redistribute them before publishing this repository publicly.
+- The crypto project uses the free CoinPaprika API and may be affected by network availability, DNS issues, provider rate limits, or API changes.
 - These applications are learning exercises and can be extended with validation, persistence, tests, and improved accessibility.
 
 ## License
