@@ -6,16 +6,17 @@ All projects use [Vite](https://vite.dev/) for local development and production 
 
 ## Projects
 
-| Project                                             | What I practiced                                                                          |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [01 Calculator](./01-calculator)                    | Component composition, `useState`, click handlers, and conditional logic                  |
-| [02 Todo App](./02-todo_app)                        | Forms, lists, controlled state, and reusable components                                   |
-| [03 Weather App](./03-weather_app)                  | `useEffect`, asynchronous requests, geocoding, and API data                               |
-| [04 Simple Social Media](./04-simple_social_media)  | Context API, `useReducer`, forms with refs, and shared state                              |
-| [05 Movie Search Engine](./05-movie_search_engiene) | API integration, loading states, React Router, Context API, and CSS Modules               |
-| [06 Memory Card Game](./06-memory-card-game)        | State-driven game logic, shuffle logic, match detection, score tracking, and win state UI |
-| [07 Music Player](./07-music_player)                | HTML audio playback, Context API, custom hooks, range inputs, routing, and favourites     |
-| [08 Crypto Website](./08-CryptoWebsite)             | CoinPaprika API data, search, sorting, responsive layouts, dynamic routes, and Recharts   |
+| Project                                             | What I practiced                                                                                               |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| [01 Calculator](./01-calculator)                    | Component composition, `useState`, click handlers, and conditional logic                                       |
+| [02 Todo App](./02-todo_app)                        | Forms, lists, controlled state, and reusable components                                                        |
+| [03 Weather App](./03-weather_app)                  | `useEffect`, asynchronous requests, geocoding, and API data                                                    |
+| [04 Simple Social Media](./04-simple_social_media)  | Context API, `useReducer`, forms with refs, and shared state                                                   |
+| [05 Movie Search Engine](./05-movie_search_engiene) | API integration, loading states, React Router, Context API, and CSS Modules                                    |
+| [06 Memory Card Game](./06-memory-card-game)        | State-driven game logic, shuffle logic, match detection, score tracking, and win state UI                      |
+| [07 Music Player](./07-music_player)                | HTML audio playback, Context API, custom hooks, range inputs, routing, and favourites                          |
+| [08 Crypto Website](./08-CryptoWebsite)             | CoinPaprika API data, search, sorting, responsive layouts, dynamic routes, and Recharts                        |
+| [09 EMS](./09-EMS)                                  | Authentication, role-based dashboards, task assignment, employee task completion, and localStorage persistence |
 
 The projects become progressively more involved, so they can be explored in order or opened independently.
 
@@ -66,6 +67,8 @@ npm run lint      # Run the project's configured linter
 - Build a cryptocurrency dashboard with search, sorting, grid/list views, and responsive cards.
 - Fetch coin metadata and seven-day historical prices from an external API.
 - Render responsive data visualizations with Recharts.
+- Build a simple employee management system with signup/login, role-based authorization, and task workflows.
+- Manage shared application state with Context API while persisting demo data in localStorage.
 
 ## Notes
 
